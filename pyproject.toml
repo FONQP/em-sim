@@ -1,0 +1,22 @@
+[project]
+name = "em-sim"
+version = "0.1.0"
+description = "A performant electromagnetic simulations Python package, written in Rust."
+readme = "README.md"
+authors = [
+    { name = "Prasanna Paithankar", email = "paithankarprasanna@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+em-sim = "em_sim:main"
+
+[tool.maturin]
+module-name = "em_sim._core"
+python-packages = ["em_sim"]
+python-source = "src"
+
+[build-system]
+requires = ["maturin>=1.0,<2.0"]
+build-backend = "maturin"
